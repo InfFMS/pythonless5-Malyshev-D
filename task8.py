@@ -4,3 +4,11 @@
 # Пример: ввод N = 4
 # [12, 77, 5555, 97]
 # Вывод: [77, 5555]
+from random import randint
+n = int(input())
+m = [randint(10, 100000) for i in range(n)]
+o = []
+for i in range(n):
+    if m[i] % int('1'*len(str(m[i]))) == 0:
+        o.append(m[i])
+print(o)

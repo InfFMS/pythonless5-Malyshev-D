@@ -4,3 +4,12 @@
 # Пример: ввод N = 6
 # [20, -90, 15, -34, 10, 0]
 # Вывод: [20, 15, 10, -90, -34, 0]
+n = int(input())
+from random import randint
+m = [randint(-100, 100) for i in range(n)]
+print(m)
+for i in range(n):
+    for j in range(i+1, n):
+        if m[i] <= 0 and m[j] > 0:
+            m[i], m[j] = m[j], m[i]
+print(m)
